@@ -27,17 +27,10 @@ function AddTasks(props) {
                     setTitle("");
                     setDescription("");
                 }} 
-                className="unique-button hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white font-semibold flex gap-2 justify-center ">
+                className="hover:text-green-800 hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white font-semibold flex gap-2 justify-center ">
                     Adicionar
-        <SquarePlus className="add hover:animate-rotate"/>
+        <SquarePlus className="add hover:animate-rotate hover:text-green-800"/>
     </button>  
-    <style jsx>{`
-  .unique-button:hover .add,
-  .unique-button:hover { /* Adiciona o seletor do botão para incluir o texto */
-    color: #00ee55;
-  }
-  }
-`}</style>
             </div>
         )
     }

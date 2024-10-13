@@ -25,13 +25,9 @@ return (
     className="hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
         <ChevronsRight/>
     </button>
-    <style jsx>{`
-  .hover-float:hover .icon {
-    color: #ee0000;
-  }
-`}</style>
+
     <button onClick={() => props.onDeleteTaskClick(task.id)} className=" hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
-        <Trash2 className="icon hover:animate-shake"/>
+        <Trash2 className="icon hover:animate-shake hover:text-red-500"/>
     </button>    
     </li>
 ))}
