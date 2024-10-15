@@ -1,9 +1,16 @@
 import { ChevronsRight, Trash2 } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import deleteSound from '/public/delete_sound.mp3'; 
+
+  const playDeleteSound = () => {
+    new Audio(deleteSound).play();
+  };
 
 function Tasks(props){
   const navigate = useNavigate()
 
+
+  
 function onSeeDetailsClick(task){
     //navigate(`/task?title=${task.title}&description=${task.description}`)
     const query = new URLSearchParams();
@@ -27,9 +34,15 @@ return (
         <ChevronsRight/>
     </button>
 
-    <button onClick={() => props.onDeleteTaskClick(task.id)} className="active:bg-slate-700 hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
-        <Trash2 className="icon hover:animate-shake hover:text-red-500"/>
-    </button>    
+<button 
+  onClick={() => {
+    playDeleteSound();
+    props.onDeleteTaskClick(task.id);
+  }} 
+  className="active:bg-slate-700 hover-float hover:drop-shadow-sm bg-slate-400 rounded-md p-2 text-white"
+>
+  <Trash2 className="icon hover:animate-shake hover:text-red-500" />
+</button> 
     </li>
 ))}
 </ul>
