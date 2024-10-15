@@ -17,16 +17,16 @@ return (
 <li key={task.id} className=" flex gap-3">
     
     <button onClick={() => props.onTaskClick(task.id)} 
-    className={`first-letter:capitalize hover-float hover:drop-shadow-sm w-full bg-slate-400 text-left text-white p-2 rounded-md ${task.isCompleted && 'line-through'}`}>
+    className={`active:bg-slate-700 first-letter:capitalize hover-float hover:drop-shadow-sm w-full bg-slate-400 text-left text-white p-2 rounded-md ${task.isCompleted && 'line-through'}`}>
         {task.title}
         </button>
 
     <button onClick={()=> onSeeDetailsClick(task)}
-    className="hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
+    className="active:bg-slate-700 hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
         <ChevronsRight/>
     </button>
 
-    <button onClick={() => props.onDeleteTaskClick(task.id)} className=" hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
+    <button onClick={() => props.onDeleteTaskClick(task.id)} className="active:bg-slate-700 hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white ">
         <Trash2 className="icon hover:animate-shake hover:text-red-500"/>
     </button>    
     </li>

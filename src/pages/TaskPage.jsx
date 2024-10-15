@@ -12,7 +12,7 @@ function TaskPage(){
         <div className='w-[500px] space-y-4 '>
             <div className="flex justify-center relative">
             <button onClick={()=> navigate(-1)}
-    className="hover-float hover:drop-shadow-sm bg-slate-300  rounded-md p-2 text-slate-700 absolute left-0 ">
+    className="active:bg-slate-700 hover-float hover:drop-shadow-sm bg-slate-300  rounded-md p-2 text-slate-700 absolute left-0 ">
         <ChevronsLeft/>
     </button>
     <h1 className=' text-3xl text-center font-bold text-cyan-400'>SAT. Description</h1>

@@ -27,9 +27,9 @@ function AddTasks(props) {
                     setTitle("");
                     setDescription("");
                 }} 
-                className="hover:text-green-800 hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white font-semibold flex gap-2 justify-center ">
+                className="active:bg-slate-700 hover:text-green-400 hover-float hover:drop-shadow-sm bg-slate-400  rounded-md p-2 text-white font-semibold flex gap-2 justify-center ">
                     Adicionar
-        <SquarePlus className="add hover:animate-rotate hover:text-green-800"/>
+        <SquarePlus className="add hover:animate-rotate hover:text-green-400"/>
     </button>  
             </div>
         )
