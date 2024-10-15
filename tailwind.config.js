@@ -26,11 +26,16 @@ export default {
           '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-1px)' },
           '20%, 40%, 60%, 80%': { transform: 'translateX(1px)' },
         },
+        slideLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-12px)' },
+        },
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
         rotate: 'rotate 0.5s ease-in-out forwards',
         shake: 'shake 0.5s ease-in-out',
+        slideLeft: 'slideLeft 0.8s ease-in-out forwards',
       },
     },
   },

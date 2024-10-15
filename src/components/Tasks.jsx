@@ -17,7 +17,8 @@ return (
 <li key={task.id} className=" flex gap-3">
     
     <button onClick={() => props.onTaskClick(task.id)} 
-    className={`active:bg-slate-700 first-letter:capitalize hover-float hover:drop-shadow-sm w-full bg-slate-400 text-left text-white p-2 rounded-md ${task.isCompleted && 'line-through'}`}>
+    className={
+`active:bg-slate-700 first-letter:capitalize hover-float hover:drop-shadow-sm w-full bg-slate-400 text-left text-white p-2 rounded-md ${task.isCompleted && 'line-through animate-slideLeft'}`}>
         {task.title}
         </button>
 
