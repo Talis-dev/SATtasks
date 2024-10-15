@@ -1,7 +1,14 @@
 import { SquarePlus } from "lucide-react";
 import { useState } from "react";
+import enterSound from '/public/enter_Sound.mp3'; 
+
+
+const playEnterSound = () => {
+    new Audio(enterSound).play();
+  };
 
 function AddTasks(props) {
+    
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     
@@ -19,10 +26,11 @@ function AddTasks(props) {
 
  
                 <button onClick={() => {
+                    
                     if(!title.trim() || !description.trim()) {
                         return alert ("Preencha o título e a descrição da tarefa")
                     }
-
+                    playEnterSound();
                     props.onTaskSubmit(title,description);
                     setTitle("");
                     setDescription("");

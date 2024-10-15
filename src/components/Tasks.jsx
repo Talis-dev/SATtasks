@@ -2,9 +2,11 @@ import { ChevronsRight, Trash2 } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import deleteSound from '/public/delete_sound.mp3'; 
 
+
   const playDeleteSound = () => {
     new Audio(deleteSound).play();
   };
+
 
 function Tasks(props){
   const navigate = useNavigate()

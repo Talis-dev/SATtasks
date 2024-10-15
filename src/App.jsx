@@ -4,6 +4,8 @@ import './App.css'
 import Tasks from './components/Tasks'
 import AddTasks from './components/AddTasks'
 
+
+
 function App() {
    // hooks [state,function state] = useState(valor inicial)*funçao que atualiza o componete*
   const [tasks, setTasks]= useState(
@@ -52,6 +54,7 @@ function onTaskSubmit(title,description){
     isCompleted: false,
   }
   setTasks([...tasks, newTask]); //...tasks = abre a lista tasks/ newTask = adiciona item a lista tasks
+
 }
 
   return (
